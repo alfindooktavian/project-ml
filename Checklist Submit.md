@@ -15,7 +15,7 @@ Sebelum mengumpulkan proyek, pastikan:
 - [x] Ada requirements.txt atau environment.yml
 - [x] Ada  README.md dengan cara menjalankan
 - [x] Folder terstruktur (src/, data/, models/, notebooks/)
-- [ ] Ada file .gitignore (jangan upload data besar)
+- [x] Ada file .gitignore (jangan upload data besar)
 - [x] Repository bersifat PUBLIC
 
 ### **Kode:**

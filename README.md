@@ -1,9 +1,9 @@
 # 📘 Judul Proyek
-*(Isi judul proyek Anda di sini)*
+ANALISIS FAKTOR PENENTU TINGKAT PENDAPATAN DAN KLASIFIKASI PENDAPATAN INDIVIDU MENGGUNAKAN MACHINE LEARNING DAN DEEP LEARNING PADA DATASET ADULT UCI
 
 ## 👤 Informasi
 - **Nama:** ALFINDO OKTAVIAN RAMADHAN  
-- **Repo:**   
+- **Repo:**   https://github.com/alfindooktavian/project-ml.git
 - **Video:** https://drive.google.com/file/d/105VQAco8SYl-759nEuwwcWuo9Vyru4pm/view?usp=sharing 
 
 ---
@@ -37,24 +37,37 @@
 ```
 project/
 │
-├── data/                   # Dataset (tidak di-commit, download manual)
+├── data/                   # Dataset 
+│   ├── adult.data
+│   └── adult.test
 │
 ├── notebooks/              # Jupyter notebooks
 │   └── ML_Project.ipynb
 │
 ├── src/                    # Source code
-│   
+│   ├── .gitkeep
+│
 ├── models/                 # Saved models
-│   ├── model_baseline.pkl
-│   ├── model_rf.pkl
-│   └── model_cnn.h5
+│   ├── logistic_regression_model.joblib
+│   ├── random_forest_model.joblib
+│   └── mlp_model.h5
 │
 ├── images/                 # Visualizations
-│   └── r
-│
+│   ├── accuracy_mlp.png
+│   ├── confusion_matrix_baseline.png
+│   ├── confusion_matrix_mlp.png
+│   ├── confusion_matrix_random_forest.png
+│   ├── distribusi_kelas_income.png
+│   ├── distribusi_target_train.png
+│   ├── distribusi_usia.png
+│   ├── heatmap_korelasi_numerik.png
+│   ├── loss_mlp.png
+│   ├── perbandingan_metrik_model.png
+│   └── training_history_mlp.png
 ├── requirements.txt        # Dependencies
 ├── .gitignore
 └── README.md
+
 ```
 ---
 
@@ -86,35 +99,39 @@ project/
 ---
 
 # 4. 🔧 Data Preparation
-- Cleaning (missing/duplicate/outliers)  
-- Transformasi (encoding/scaling)  
-- Splitting (train/val/test)  
+- Cleaning: menangani missing value, duplicate, dan outlier  
+- Transformasi: encoding fitur kategorikal & scaling numerik  
+- Splitting: membagi data menjadi train, validation, dan test  
 
 ---
 
 # 5. 🤖 Modeling
-- **Model 1 – Baseline:** [...]  
-- **Model 2 – Advanced ML:** [...]  
-- **Model 3 – Deep Learning:** [...]  
+- **Model 1 – Baseline:** Logistic Regression dengan SMOTE  
+- **Model 2 – Advanced ML:** Random Forest dengan SMOTE  
+- **Model 3 – Deep Learning:** MLP (Multi-Layer Perceptron) dengan SMOTE, early stopping, dan dense layer + dropout  
+
 
 ---
 
 # 6. 🧪 Evaluation
-**Metrik:** Accuracy / F1 / MAE / MSE (pilih sesuai tugas)
+**Metrik:** Accuracy / Precision / Recall / F1-Score
 
 ### Hasil Singkat
-| Model | Score | Catatan |
-|-------|--------|---------|
-| Baseline | [...] | |
-| Advanced | [...] | |
-| Deep Learning | [...] | |
+| Model | Accuracy | Precision | Recall | F1-Score |
+|-------|---------|-----------|--------|----------|
+| Baseline (Logistic Regression) | 0.8155 | 0.5787 | 0.8610 | 0.6921 |
+| Advanced (Random Forest Classifier) | 0.8084 | 0.5660 | 0.8776 | 0.6882 |
+| Deep Learning (MLP) | 0.8276 | 0.6012 | 0.8450 | 0.7025 |
+
 
 ---
 
 # 7. 🏁 Kesimpulan
-- Model terbaik: [...]  
-- Alasan: [...]  
-- Insight penting: [...]  
+
+- **Model Terbaik:** Deep Learning (MLP)  
+- **Alasan:** Mampu menangkap pola non-linear antar fitur numerik dan kategori dengan baik, lebih efektif dibanding Logistic Regression dan Random Forest pada dataset tabular kompleks.  
+- **Insight Penting:** Fitur seperti `age`, `education-num`, `hours-per-week`, dan `capital-gain` berpengaruh terhadap prediksi income, serta deep learning unggul dalam menangkap interaksi kompleks antar fitur.
+ 
 
 ---
 
@@ -127,4 +144,19 @@ project/
 ---
 
 # 9. 🔁 Reproducibility
-Gunakan environment:
+
+Gunakan environment Python dengan library berikut agar proyek dapat direproduksi dengan benar:
+
+```bash
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+scipy
+tensorflow
+imblearn
+joblib
+ucimlrepo
+
+
