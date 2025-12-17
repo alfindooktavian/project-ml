@@ -38,19 +38,32 @@ ANALISIS FAKTOR PENENTU TINGKAT PENDAPATAN DAN KLASIFIKASI PENDAPATAN INDIVIDU M
 project/
 │
 ├── data/                   # Dataset (tidak di-commit, download manual)
+│   ├── adult.data
+│   └── adult.test
 │
 ├── notebooks/              # Jupyter notebooks
 │   └── ML_Project.ipynb
 │
 ├── src/                    # Source code
+│   ├── .gitkeep
 │   
+│   
+│
 ├── models/                 # Saved models
-│   ├── model_baseline.pkl
-│   ├── model_rf.pkl
-│   └── model_cnn.h5
+│   ├── logistic_regression_model.joblib
+│   ├── random_forest_model.joblib
+│   └── mlp_model.h5
 │
 ├── images/                 # Visualizations
-│   └── r
+│   ├── confusion_matrix_baseline.png
+│   ├── confusion_matrix_random_forest.png
+│   ├── confusion_matrix_mlp.png
+│   ├── training_history_mlp.png
+│   ├── metric_comparison.png
+│   ├── target_distribution.png
+│   ├── target_distribution_count.png
+│   ├── age_distribution.png
+│   └── numeric_features_correlation.png
 │
 ├── requirements.txt        # Dependencies
 ├── .gitignore
@@ -142,6 +155,8 @@ matplotlib
 seaborn
 scipy
 tensorflow
+imblearn
 joblib
 ucimlrepo
+
 
