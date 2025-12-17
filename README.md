@@ -37,7 +37,7 @@ ANALISIS FAKTOR PENENTU TINGKAT PENDAPATAN DAN KLASIFIKASI PENDAPATAN INDIVIDU M
 ```
 project/
 │
-├── data/                   # Dataset (tidak di-commit, download manual)
+├── data/                   # Dataset 
 │   ├── adult.data
 │   └── adult.test
 │
@@ -46,8 +46,6 @@ project/
 │
 ├── src/                    # Source code
 │   ├── .gitkeep
-│   
-│   
 │
 ├── models/                 # Saved models
 │   ├── logistic_regression_model.joblib
@@ -55,19 +53,21 @@ project/
 │   └── mlp_model.h5
 │
 ├── images/                 # Visualizations
+│   ├── accuracy_mlp.png
 │   ├── confusion_matrix_baseline.png
-│   ├── confusion_matrix_random_forest.png
 │   ├── confusion_matrix_mlp.png
-│   ├── training_history_mlp.png
-│   ├── metric_comparison.png
-│   ├── target_distribution.png
-│   ├── target_distribution_count.png
-│   ├── age_distribution.png
-│   └── numeric_features_correlation.png
-│
+│   ├── confusion_matrix_random_forest.png
+│   ├── distribusi_kelas_income.png
+│   ├── distribusi_target_train.png
+│   ├── distribusi_usia.png
+│   ├── heatmap_korelasi_numerik.png
+│   ├── loss_mlp.png
+│   ├── perbandingan_metrik_model.png
+│   └── training_history_mlp.png
 ├── requirements.txt        # Dependencies
 ├── .gitignore
 └── README.md
+
 ```
 ---
 
